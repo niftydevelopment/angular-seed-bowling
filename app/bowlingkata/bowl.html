@@ -1,0 +1,18 @@
+<h1>Här skall det bowlas</h1>
+
+<div ng-controller="PlayCtrl as p">
+
+	<score></score>
+
+	Spelare: {{p.bowl.game.player}}<br/>
+
+	<input ng-model="p.currentFrame">
+	<input type="button" ng-click="p.roll()" value="roll">
+
+	<table>
+		<tr ng-repeat="frame in p.bowl.game.frames">
+			<td>{{frame}}</td>
+		</tr>
+	</table>
+
+</div>

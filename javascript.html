@@ -1,0 +1,65 @@
+<html>
+
+<script>
+function Greet(namn) {
+	var greeting = 'Välkommen:';
+
+	function name() {
+		console.debug('greet:', greeting + namn);
+	}
+
+	return name;
+}
+
+function Player(namn) {
+	this.namn = namn;
+
+	this.doStuff = function() {
+		//alert(namn);	
+	}
+}
+
+function init() {
+	var a = Greet('Nisse');
+	var b = Greet('Hybert');
+	a();
+	b();
+
+	var p1 = new Player('Demas');
+	var p2 = new Player('Swano');
+	
+	console.debug(p1.namn);
+	p1.doStuff();
+	console.debug(p2.namn);
+	p2.doStuff();
+
+
+
+	//An object literal is a comma-separated list of name-value pairs wrapped in curly braces. 
+	//json
+	var json = {
+		firstname:'Nisse',
+		surname:'Nilsson'
+	}
+
+	console.debug('json exempel': json);
+
+}
+
+function exempelFcallingF() {
+	var a = function() {
+		console.debug('function a');
+	}
+
+	function(a) {
+		console.debug('b calling a:', a);
+	}
+}
+
+</script>
+
+<body onload="init();">
+
+</body>
+
+</html>

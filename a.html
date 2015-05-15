@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+	<script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js">
+	</script>
+
+	<script type="text/javascript">
+
+	angular.module('app', ['bowling-service'])
+		.controller('aCtrl', function(gameService) {
+			var game = this;
+
+			game.player = gameService;
+
+		}).controller('bCtrl', function(gameService) {
+			var game = this;
+
+			game.player = gameService;
+		});
+
+	angular.module('bowling-service', [])
+		.service('gameService', function() {
+			var game = this;
+			game.name = 'Nisse';
+		});
+
+	</script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+
+	<body>
+	
+	<div ng-controller="aCtrl as a">
+		A: Spelarens namn: {{a.player.name}}
+	<input ng-model="a.player.name">
+
+	</div>
+
+	<div ng-controller="bCtrl as b">
+		B: Spelarens namn: {{b.player.name}}
+	</div>
+
+
+	</body>
+
+</html>

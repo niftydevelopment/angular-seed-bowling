@@ -1,0 +1,11 @@
+<h1>Vad heter ni som skall spela?</h1>
+
+<div ng-controller="SignupCtrl as s">
+
+	Spelare:
+	<input ng-model="s.bowl.game.player">
+
+	<input type="button" ng-click="s.goPlay()">
+	<br />
+	{{s.bowl.game.player}}
+</div>

@@ -1,0 +1,21 @@
+<div ng-if="notLoaded" style="padding:1em;">
+	Poäng inte laddade.
+	<input type="button" value="Ladda poäng" 
+		ng-click="fetchScore()" />
+</div>
+
+<div ng-if="loading" style="padding:1em;">
+	Laddar poäng...
+</div>
+
+<div ng-if="woops" style="padding:1em;">
+	Kunde inte ladda poäng :-(
+	<input type="button" value="Ladda om poäng" 
+		ng-click="fetchScore()" />
+</div>
+
+<div ng-if="loaded" style="padding:1em;">
+	Spelaren har: {{score}} poäng.
+	<input type="button" value="Ladda om poäng" 
+		ng-click="fetchScore()" />
+</div>
